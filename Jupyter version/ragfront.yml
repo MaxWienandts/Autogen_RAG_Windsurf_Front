@@ -1,0 +1,36 @@
+# Update conda: conda update -n base -c defaults conda
+# Create: conda env create --file ragfront.yml
+# Remove: conda remove --name ragfront --all
+# Activate: conda activate ragfront
+# To get all libraries versions: pip list --format=freeze > requirements.txt
+
+name: ragfront
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python==3.10
+  - pip
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - uvicorn
+  - PyPDF2
+  - openai
+  - elasticsearch
+  - langchain
+  - langchain-community
+  - langchain-core
+  - langchain-experimental
+
+  - pip:
+      - langchain_openai
+      - langchain_elasticsearch
+      - autogen_core
+      - langfuse
+
+
+
+
